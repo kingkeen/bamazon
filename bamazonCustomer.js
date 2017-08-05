@@ -35,14 +35,14 @@ connection.connect(function(err) {
 
 // initial function to list items for sale
 function itemList() {
-	var query = "SELECT * FROM products";
-	connection.query(query, function(err, res){
+	var query1 = "SELECT * FROM products";
+	connection.query(query1, function(err, res){
 
 	totalItems = res.length;
 
 	for (i=0; i<res.length; i++) {
 		console.log("==============", "\nItem #: "+ res[i].item_id + "\nItem: "+ res[i].product_name + "\nDepartment: " +res[i].department_name + "\nPrice: $" + res[i].price + "\nQuantity in Stock: " + res[i].stock_quantity);
-		availableItems.push(res[i]);
+		
 		}
 		// console.log(availableItems);
 		options();
