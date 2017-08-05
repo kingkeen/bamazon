@@ -1,3 +1,5 @@
 nodes_modules
 .DS_Store
 /nodes_modules
+node_modules
+/node_modules
